@@ -21,7 +21,7 @@ const router = new VueRouter({
             component: OnlineStore,
         },
         {
-            name: "oflineStore",
+            name: "offlineStore",
             path: "/offline-store",
             component: OfflineStore,
         },

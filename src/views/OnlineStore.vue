@@ -1,13 +1,22 @@
 <template>
-  <div>Online Store</div>
+  <div class="main">
+    <div class="header">
+      <div class="title">레진 온라인 스토어</div>
+    </div>
+    <div class="content"></div>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style scoped>
+.main {
+  width: 100%;
+}
+.header {
+  
+  text-align: center;
+}
 </style>

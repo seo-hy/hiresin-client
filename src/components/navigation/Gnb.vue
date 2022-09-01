@@ -1,73 +1,70 @@
 <template>
   <div class="main">
-    <router-link :to="{name : 'home'}" class="logo"><img src="@/assets/images/logo.png"/></router-link>
-    <div v-for="(menu, idx) in menuList" :key = "idx" class="menu">
-        <router-link :to="{name : menu.to}" class="menu">{{menu.title}}</router-link>
-    </div>
+    <router-link :to="{ name: 'home' }" class="logo"
+      ><img src="@/assets/images/logo.png"
+    /></router-link>
+    <router-link :to="{ name: 'onlineStore' }" class="menu">
+      <div>
+        <div class="sub">레진아트 재료</div>
+        <div>온라인 스토어</div>
+      </div>
+    </router-link>
+    <router-link
+      :to="{ name: 'offlineStore' }"
+      class="menu"
+    >
+      <div>
+        <div class="sub">레진아트 재료</div>
+        <div>오프라인 스토어</div>
+      </div>
+    </router-link>
+    <router-link :to="{ name: 'share' }" class="menu">
+      <div>스토어 정보 공유</div>
+    </router-link>
+    <router-link :to="{ name: 'about' }" class="menu">
+      <div>About 하이레진</div>
+    </router-link>
   </div>
 </template>
 
 <script>
-export default {
-    data(){
-        return{
-            menuList:[
-                {
-                    title:"레진 온라인 스토어",
-                    to : "onlineStore"   
-                },
-                {
-                    title:"레진 오프라인 스토어",
-                    to : "offlineStore"   
-                },
-                {
-                    title:"레진아트 유튜브",
-                    to : "youtube"   
-                },
-                {
-                    title:"스토어/유튜브 정보 공유",
-                    to : "share"   
-                },
-                {
-                    title:"About 하이레진",
-                    to : "about"   
-                },
-            ]
-        }
-    }
-}
+export default {};
 </script>
 
 <style scoped>
-.main{
-    width:100%;
-    min-width: 1440px;
-    height: 60px;
-    box-shadow: 0px 2px 10px rgba(17, 17, 16, 0.2);
-    display: flex;
-    float: left;
+.main {
+  width: 100%;
+  min-width: 1000px;
+  height: 80px;
+  box-shadow: 0px 2px 10px rgba(17, 17, 16, 0.2);
+  display: flex;
 }
-.logo{
-    width:190px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo {
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.logo>img{
-    width:130px;
-    margin-left: 10px;
+.logo > img {
+  width: 68px;
+  margin-left: 10px;
 }
-.menu{
-    margin: 0 8px;
-    height:60px;
-    line-height: 60px;
-    text-align: center;
-    text-decoration: none;
-    color : #373530;
-    font-size: 15px;
-    letter-spacing: -0.5px;
+.menu {
+  width: 160px;
+  height: 80px;
+  text-decoration: none;
+  color: #373530;
+  font-size: 17px;
+  letter-spacing: -0.2px;
+  display: flex;
+  align-items: center;
 }
-.menu:hover{
-    color:#373530c8;
+
+.menu:hover {
+  color: #373530c8;
+}
+
+.sub {
+  font-size: 13px;
 }
 </style>
